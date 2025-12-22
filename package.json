@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "dev": "vite",
-    "build": "npx tsc && npx vite build",
+    "build": "vite build",
+    "typecheck": "tsc",
     "preview": "vite preview"
   },
   "keywords": ["portfolio", "typescript", "professional"],
