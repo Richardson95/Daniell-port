@@ -1,0 +1,11 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "dist",
+  "installCommand": "echo 'No build needed - using pre-built files'",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
