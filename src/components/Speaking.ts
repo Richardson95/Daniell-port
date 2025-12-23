@@ -40,6 +40,33 @@ export class Speaking {
 
         const content = createElement('div', 'speaking-content');
 
+        // Speaking Gallery
+        const speakingGallery = createElement('div', 'speaking-gallery');
+        speakingGallery.setAttribute('data-aos', 'fade-up');
+
+        const speakingImages = [
+            '/images/speaking/Speaking.jpg',
+            '/images/speaking/Speaking1.PNG',
+            '/images/speaking/Speaking2.jpg',
+            '/images/speaking/Speaking3.jpg'
+        ];
+
+        speakingImages.forEach((imgSrc, index) => {
+            const imgWrapper = createElement('div', 'speaking-image-wrapper');
+            imgWrapper.setAttribute('data-aos', 'zoom-in');
+            imgWrapper.setAttribute('data-aos-delay', `${index * 100}`);
+
+            const img = createElement('img', 'speaking-image');
+            setAttributes(img, {
+                'src': imgSrc,
+                'alt': `Speaking Engagement ${index + 1}`,
+                'loading': 'lazy'
+            });
+
+            imgWrapper.appendChild(img);
+            speakingGallery.appendChild(imgWrapper);
+        });
+
         // Speaking Info
         const speakingInfo = createElement('div', 'speaking-info');
         speakingInfo.setAttribute('data-aos', 'fade-right');
@@ -127,6 +154,9 @@ export class Speaking {
         engagementsDiv.appendChild(speakingBtn);
 
         appendChildren(content, [speakingInfo, engagementsDiv]);
+
+        // Add gallery at the end
+        content.appendChild(speakingGallery);
         appendChildren(container, [label, title, content]);
         section.appendChild(container);
 

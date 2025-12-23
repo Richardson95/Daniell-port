@@ -1700,10 +1700,399 @@ a.footer-contact-item:hover i {
     }
 }
 
+/* ============================================
+   FITS MENTORSHIP SECTION
+   ============================================ */
+.fits-section {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+}
+
+.fits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    margin-top: var(--space-2xl);
+}
+
+.fits-details,
+.fits-showcase {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.fits-subtitle {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--black-primary);
+    margin-bottom: var(--space-lg);
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+.fits-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-gold);
+}
+
+.fits-highlights-list {
+    list-style: none;
+    margin-bottom: var(--space-xl);
+}
+
+.fits-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    font-size: var(--text-lg);
+    color: var(--black-primary);
+    transition: transform var(--transition-base);
+}
+
+.fits-highlight-item:hover {
+    transform: translateX(10px);
+}
+
+.fits-highlight-item .highlight-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.fits-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.fits-stat-box {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.fits-stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.fits-stat-number {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fits-stat-label {
+    font-size: var(--text-sm);
+    color: var(--black-secondary);
+    margin-top: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fits-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.fits-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.fits-image-wrapper:first-child {
+    grid-column: 1 / -1;
+}
+
+.fits-image-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+.fits-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.fits-image-wrapper:hover .fits-image {
+    transform: scale(1.1);
+}
+
+.fits-cta {
+    text-align: center;
+    margin-top: var(--space-2xl);
+}
+
+/* ============================================
+   REVIEWS SECTION
+   ============================================ */
+.reviews-section {
+    padding: var(--space-3xl) 0;
+    background: var(--white);
+}
+
+.section-description-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-xl);
+    font-size: var(--text-lg);
+    color: var(--black-secondary);
+    line-height: 1.8;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+.review-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.review-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.review-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.review-card:hover .review-image {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   SPEAKING SECTION - GALLERY ENHANCEMENT
+   ============================================ */
+.speaking-gallery {
+    grid-column: 1 / -1;
+    margin-top: var(--space-2xl);
+}
+
+.speaking-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.speaking-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4/3;
+    transition: all var(--transition-base);
+}
+
+.speaking-image-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.speaking-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.speaking-image-wrapper:hover .speaking-image {
+    transform: scale(1.15);
+}
+
+/* ============================================
+   RESPONSIVE - NEW SECTIONS
+   ============================================ */
+@media (max-width: 968px) {
+    .fits-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .fits-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fits-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: var(--space-md);
+    }
+
+    .speaking-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .fits-subtitle {
+        font-size: var(--text-xl);
+    }
+
+    .fits-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .fits-stat-box {
+        padding: var(--space-md);
+    }
+
+    .fits-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .review-image-wrapper {
+        height: 250px;
+    }
+
+    .speaking-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .section-description-center {
+        font-size: var(--text-base);
+    }
+}
+
+/* ============================================
+   CURSOR EFFECTS
+   ============================================ */
+.custom-cursor,
+.custom-cursor-follower {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor {
+    width: 10px;
+    height: 10px;
+    background: var(--gold-primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor-follower {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--gold-primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.custom-cursor.cursor-hover,
+.custom-cursor-follower.cursor-hover {
+    width: 60px;
+    height: 60px;
+}
+
+/* ============================================
+   FLOATING PARTICLES
+   ============================================ */
+.floating-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--gold-primary);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 @media (max-width: 640px) {
     :root {
         --space-xl: 3rem;
         --space-2xl: 4rem;
         --space-3xl: 5rem;
+    }
+
+    /* Hide cursor effects on mobile */
+    .custom-cursor,
+    .custom-cursor-follower {
+        display: none;
     }
 }

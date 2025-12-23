@@ -15,7 +15,7 @@ export class About {
         const imgWrapper = createElement('div', 'about-img-wrapper');
         const img = createElement('img');
         setAttributes(img, {
-            'src': '/images/profile/daniellaimage1.jpg',
+            'src': '/images/profile/daniellaimage3.jpeg',
             'alt': 'Daniella Williams'
         });
 

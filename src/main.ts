@@ -4,6 +4,8 @@ import { Brands } from './components/Brands';
 import { About } from './components/About';
 import { ExperienceSection } from './components/Experience';
 import { Projects } from './components/Projects';
+import { FitsMentorship } from './components/FitsMentorship';
+import { Reviews } from './components/Reviews';
 import { Speaking } from './components/Speaking';
 import { Certifications } from './components/Certifications';
 import { Services } from './components/Services';
@@ -33,6 +35,8 @@ class App {
         const about = new About();
         const experience = new ExperienceSection();
         const projects = new Projects();
+        const fitsMentorship = new FitsMentorship();
+        const reviews = new Reviews();
         const speaking = new Speaking();
         const certifications = new Certifications();
         const services = new Services();
@@ -45,6 +49,8 @@ class App {
         app.appendChild(about.create());
         app.appendChild(experience.create());
         app.appendChild(projects.create());
+        app.appendChild(fitsMentorship.create());
+        app.appendChild(reviews.create());
         app.appendChild(speaking.create());
         app.appendChild(certifications.create());
         app.appendChild(services.create());

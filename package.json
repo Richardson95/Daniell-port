@@ -1,6 +1,7 @@
 {
   "name": "daniella-williams-portfolio",
   "version": "1.0.0",
+  "type": "module",
   "description": "Professional portfolio website for Daniella Williams",
   "main": "index.html",
   "scripts": {

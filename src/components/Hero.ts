@@ -78,7 +78,7 @@ export class Hero {
         // Main Image
         const mainImage = createElement('img', 'hero-main-image');
         setAttributes(mainImage, {
-            'src': '/images/profile/daniellaimage3.jpeg',
+            'src': '/images/profile/daniellaimage1.jpg',
             'alt': 'Daniella Williams'
         });
 
