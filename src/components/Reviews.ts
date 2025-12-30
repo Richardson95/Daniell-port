@@ -26,18 +26,8 @@ export class Reviews {
 
         // Add all review images
         const reviewImages = [
-            'Review.jpg',
             'Review1.jpg',
-            'Review2.jpg',
-            'Review3.jpg',
-            'Review4.jpg',
-            'Review5.PNG',
-            'Review6.PNG',
-            'Review7.PNG',
-            'Review8.jpg',
-            'Review9.jpg',
-            'Review10.jpg',
-            'Review11.jpg'
+            'Review2.jpg'
         ];
 
         reviewImages.forEach((img, index) => {

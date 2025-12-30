@@ -45,8 +45,6 @@ export class Speaking {
         speakingGallery.setAttribute('data-aos', 'fade-up');
 
         const speakingImages = [
-            '/images/speaking/Speaking.jpg',
-            '/images/speaking/Speaking1.PNG',
             '/images/speaking/Speaking2.jpg',
             '/images/speaking/Speaking3.jpg'
         ];

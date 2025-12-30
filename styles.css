@@ -1869,30 +1869,34 @@ a.footer-contact-item:hover i {
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
     margin-top: var(--space-2xl);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .review-card {
-    background: var(--white);
+    background: transparent;
     border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    overflow: visible;
     transition: all var(--transition-base);
-    cursor: pointer;
 }
 
-.review-card:hover {
+.review-image-wrapper:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
 }
 
 .review-image-wrapper {
     width: 100%;
-    height: 200px;
     overflow: hidden;
     position: relative;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4/3;
+    transition: all var(--transition-base);
 }
 
 .review-image {
@@ -1902,8 +1906,8 @@ a.footer-contact-item:hover i {
     transition: transform var(--transition-slow);
 }
 
-.review-card:hover .review-image {
-    transform: scale(1.1);
+.review-image-wrapper:hover .review-image {
+    transform: scale(1.15);
 }
 
 /* ============================================
@@ -1963,7 +1967,7 @@ a.footer-contact-item:hover i {
     }
 
     .reviews-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
     }
 
@@ -1993,10 +1997,6 @@ a.footer-contact-item:hover i {
     .reviews-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
-    }
-
-    .review-image-wrapper {
-        height: 250px;
     }
 
     .speaking-gallery {
